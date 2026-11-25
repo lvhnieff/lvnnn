@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="NEXURA PRESET FINDER — temukan link preset Alight Motion dari komentar TikTok.">
+  <title>NEXURA PRESET FINDER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Nexura home"><span class="brand-mark">N</span><span>NEXURA<span class="brand-light">.</span></span></a>
+    <span class="top-label">PRESET FINDER</span>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> TIKTOK COMMENT SEARCH</div>
+      <h1>Find your next<br><span>Alight Motion preset.</span></h1>
+      <p class="intro">Masukkan link video TikTok. NEXURA akan menyaring komentar yang berisi tautan preset Alight Motion.</p>
+
+      <form id="search-form" class="search-card">
+        <label for="video-url">LINK VIDEO TIKTOK</label>
+        <div class="input-row">
+          <input id="video-url" name="url" type="url" placeholder="https://www.tiktok.com/@user/video/..." required autocomplete="url">
+          <button id="search-button" type="submit"><span class="button-text">Cari preset</span><span class="spinner" aria-hidden="true"></span><span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="hint">Contoh: salin URL video TikTok, lalu tempel di sini.</p>
+      </form>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <section id="results-section" class="results-section" hidden>
+        <div class="results-heading">
+          <div><div class="eyebrow">HASIL PEMINDAIAN</div><h2>Preset ditemukan <span id="result-count">0</span></h2></div>
+          <button id="copy-all" class="secondary-button" type="button">Salin semua link</button>
+        </div>
+        <div id="results" class="results"></div>
+      </section>
+    </section>
+    <footer>
+      <span>© <span id="year"></span> NEXURA PRESET FINDER</span>
+      <span>Unofficial tool · Not affiliated with TikTok or Alight Motion</span>
+    </footer>
+  </main>
+  <script src="/script.js" defer></script>
+</body>
+</html>
